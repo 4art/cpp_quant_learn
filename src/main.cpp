@@ -1,10 +1,13 @@
 #include <iostream>
 #include "time_value.h"
+#include "zero_coupon_bonds.h"
 
 void timeValue();
 
 int main() {
     timeValue();
+    ZeroCouponBonds *pBonds = new ZeroCouponBonds(1000, 2, 4);
+    std::cout << "Zero bond present price: " << pBonds->calculatePrice() << std::endl;
     return 0;
 }
 
